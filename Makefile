@@ -19,7 +19,8 @@ ARCH= -gencode arch=compute_30,code=sm_30 \
       -gencode arch=compute_35,code=sm_35 \
       -gencode arch=compute_50,code=[sm_50,compute_50] \
       -gencode arch=compute_52,code=[sm_52,compute_52] \
-	  -gencode arch=compute_61,code=[sm_61,compute_61]
+	  -gencode arch=compute_61,code=[sm_61,compute_61] \
+	  -gencode arch=compute_30,code=sm_30
 
 OS := $(shell uname)
 
@@ -43,8 +44,7 @@ OS := $(shell uname)
 
 # For Jetson Tx2 or Drive-PX2 uncomment:
 # ARCH= -gencode arch=compute_62,code=[sm_62,compute_62]
-
-
+# GP100/Tesla K80
 VPATH=./src/
 EXEC=darknet
 OBJDIR=./obj/
